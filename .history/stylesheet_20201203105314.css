@@ -1,0 +1,14 @@
+.hide_container {
+    display: none;
+}
+
+.show_container{
+    display:block;
+    border-width: 12px
+    padding: 30px
+    width: 200px
+}
+
+.background {
+    background-color: aqua;
+}

@@ -1,0 +1,16 @@
+*{
+    font-family: 'Poppins', sans-serif;
+    
+}
+
+.hide_container {
+    display: none;
+}
+
+.show_container{
+    display:block;
+}
+
+.background {
+   
+}

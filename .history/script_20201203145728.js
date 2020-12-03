@@ -18,7 +18,7 @@ var question = [
 
 ]
 welcomeContainer.style.padding = "250px 100px 200px 30px ";
-
+welcomeContainer.style.font = 
 
 startQuizBtn.addEventListener('click', function() {
  console.log("start")

@@ -19,19 +19,21 @@ var question = [
 ]
 welcomeContainer.style.padding = "250px 100px 200px 30px ";
 
-
 startQuizBtn.addEventListener('click', function() {
  console.log("start")
 var welcomeContainer = document.getElementById('welcomeContainer');
 
 welcomeContainer.style.display = 'none';
 
+
+
+
 var questionContainer = document.getElementById("questionContainer")
  questionContainer.style.display = "block";
  questionContainer.setAttribute('class', 'background');
 
 
- var questionContainer = document.getElementById("question")
+ var welcom
  /*
  1. need to hide welcom screen
  

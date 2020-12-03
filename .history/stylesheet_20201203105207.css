@@ -1,0 +1,14 @@
+.hide_container {
+    display: none;
+}
+
+.show_container{
+    display:block;
+}
+
+.background {
+    background-color: aqua;
+}
+.box{
+    
+}

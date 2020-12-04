@@ -20,7 +20,6 @@ var question = [
 
 welcomeContainer.style.padding = "250px 100px 200px 30px ";
 
-
  //for (var i=0; i < questions.length; i ++){
   // var response =  window.statement(questions[i].statement);
    // if (response == question[i].correct){
@@ -45,7 +44,6 @@ var questionContainer = document.getElementById("questionContainer")
  
 var statement =document.getElementById("statement")
 var choiceA = document.getElementById("choice-A-btn")
-
 var choiceB = document.getElementById("choice-B-btn")
 var choiceC = document.getElementById("choice-C-btn")
 var choiceD = document.getElementById("choice-D-btn")
@@ -62,7 +60,7 @@ statement.innerText = question[count].statement
 showQuestion()
  //or (var i = 0; i < question.length; i ++ ){
    //  choiceA.innerText 
-``
+
  }
 
  //var questionContainer = document.getElementById("question")

@@ -62,7 +62,7 @@ statement.innerText = question[count].statement
 showQuestion()
  //or (var i = 0; i < question.length; i ++ ){
    //  choiceA.innerText 
-``
+
  }
 
  //var questionContainer = document.getElementById("question")

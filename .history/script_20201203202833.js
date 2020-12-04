@@ -58,7 +58,7 @@ var count2 = 1
 function showQuestion() {
 statement.innerText = question[count].statement
 // choiceA.innerText =question[count2].choices
-
+}
 showQuestion()
  //or (var i = 0; i < question.length; i ++ ){
    //  choiceA.innerText 

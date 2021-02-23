@@ -1,5 +1,5 @@
 var startQuizBtn = document.getElementById("start-quiz-btn");
-var questions = [
+var question = [
     {
         statement: 'What Defines an HTML Element',
         choices: ['start tag', 'some content', 'end tag', 'all the above'],
@@ -22,45 +22,64 @@ var questions = [
 welcomeContainer.style.padding = "250px 100px 200px 30px ";
 
 
-
-
-
-
  //for (var i=0; i < questions.length; i ++){
-  //var response =  window.statement(questions[i].statement);
- //  if (response == question[i].correct){
+  // var response =  window.statement(questions[i].statement);
+   // if (response == question[i].correct){
 
-  // } else {
-    //   alert ("wrong")
- //timer function - timer
- //}
+//    } else {
+//        alert ("wrong")
+// timer function - timer  
+//    }
    
-//}
-//  var minutesDisplay = document.querySelector("#minutes");
- var secondsDisplay = document.querySelector("#seconds");
-// var coundownTimer=  minutesDisplay.innerHTML
-// for loop ()
+// }
+ var minutesDisplay = document.querySelector("#minutes");
+var secondsDisplay = document.querySelector("#seconds");
+var h3 = document.getElementsByTagName("h3");
+h3[0].innerHTML = "Countdown Timer With JS";
 
-var time =100
+var sec         = 1800,
+    countDiv    = document.getElementById("#minutes,"),
+    secpass,
+    countDown   = setInterval(function () {
+        'use strict';
+        
+        secpass();
+    }, 1000);
 
-var setMyTime;
-
-function myTimer() {
-    time = time - 1;
-    secondsDisplay.innerHTML = time 
- if (time == 0){
-    //time should clear
-    clearInterval(setMyTime)
-    //quiz should end- show endding page
- }
- 
+function secpass() {
+    'use strict';
+    
+    var min     = Math.floor(sec / 60),
+        remSec  = sec % 60;
+    
+    if (remSec < 10) {
+        
+        remSec = '0' + remSec;
+    
+    }
+    if (min < 10) {
+        
+        min = '0' + min;
+    
+    }
+    countDiv.innerHTML = min + ":" + remSec;
+    
+    if (sec > 0) {
+        
+        sec = sec - 1;
+        
+    } else {
+        
+        clearInterval(countDown);
+        
+        countDiv.innerHTML = 'countdown done';
+        
+    }
 }
 
 
-startQuizBtn.addEventListener('click', function() {
-    console.log('here')
 
-    setMyTime = setInterval(myTimer, 1000)
+startQuizBtn.addEventListener('click', function() {
 welcomeContainer.style.display = 'none';
 
 
@@ -92,10 +111,10 @@ function wrongAnswer(){
 
 
 function showQuestion() {
-statement.innerText = questions[currentQuestion].statement
-for (var i = 0; i < questions[currentQuestion].choices.length; i ++ ){
+statement.innerText = question[currentQuestion].statement
+for (var i = 0; i < question[currentQuestion].choices.length; i ++ ){
 if (i === 0) {
-    choiceA.innerText = questions[currentQuestion].choices[i]
+    choiceA.innerText = question[currentQuestion].choices[i]
     choiceA.addEventListener("click", function(event){
 if (currentQuestion === 0 || currentQuestion === 1 || currentQuestion === 2){
  wrongAnswer()
@@ -104,7 +123,7 @@ if (currentQuestion === 0 || currentQuestion === 1 || currentQuestion === 2){
     })
 }
 else if (i == 1 ){
-    choiceB.innerText = questions[currentQuestion].choices[i]
+    choiceB.innerText = question[currentQuestion].choices[i]
     choiceB.addEventListener("click", function(event){
         if (currentQuestion === 0 ){
          wrongAnswer()
@@ -122,7 +141,7 @@ else if (i == 2 ){
             })
 }
 else if (i == 3 ){
-    choiceD.innerText = questions[currentQuestion].choices[i]
+    choiceD.innerText = question[currentQuestion].choices[i]
     choiceD.addEventListener("click", function(event){
         if (currentQuestion === 0 ){
          correctAnswers()
